@@ -1,8 +1,10 @@
 import Header from './components/Header';
 import Main from './components/Main';
-import Basket from './components/Basket';
+import Basket from '.react 2\react-curso-app\Appcoder\src\components\Basket';
 import data from './data';
 import { useState } from 'react';
+
+
 
 function App() {
   const { products } = data;

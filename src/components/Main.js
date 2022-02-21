@@ -1,15 +1,16 @@
 import React from 'react';
+import Product from './Product';
 
-export default function Product(props) {
-  const { product, onAdd } = props;
+export default function Main(props) {
+  const { products, onAdd } = props;
   return (
-    <div>
-      <img className="small" src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
-      <div>${product.price}</div>
-      <div>
-        <button onClick={() => onAdd(product)}>Agregar al carro</button>
+    <main className="block col-2">
+      <h2>Producto</h2>
+      <div className="row">
+        {products.map((product) => (
+          <Product key={product.id} product={product} onAdd={onAdd}></Product>
+        ))}
       </div>
-    </div>
+    </main>
   );
 }
